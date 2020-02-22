@@ -193,8 +193,6 @@ ggplot(df, aes(fill = group, ymax = percentage, ymin = 0, xmax = 2, xmin = 1)) +
 
 The nanopores through which DNA is passed, and signal collected, are arrayed as a 2-dimensional matrix. A heatmap can be plotted showing channel productivity against spatial position on the matrix. Such a plot enables the identification of spatial artifacts that could result from membrane damage through e.g. the introduction of an air-bubble. This heatmap representation of spatial activity shows only gross spatial aberations. Since each channel can address four differemnt pores (Mux) the activity plot below shows the number of sequences produced per channel, not per pore. 
 
-
-
 ```{r channel_plot, include=TRUE, echo=FALSE, fig.fullwidth = TRUE}
 # create an empty read count container ... MinION or PromethION??
 
@@ -637,7 +635,7 @@ The graph presented above shows the number of sequencing channels that are activ
 # Demultiplexing
 
 
-```{r demultiplex, cache=FALSE, echo=FALSE}
+```{r demultiplex, cache=FALSE, echo=FALSE, eval=FALSE}
 barcodes = 0
 barcodeUnass = 0
 barcodeRange <- c(0,0)
